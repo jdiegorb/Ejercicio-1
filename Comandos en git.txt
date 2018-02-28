@@ -1,0 +1,102 @@
+::::::::::::::Conceptos Git::::::::::::
+GIT: Es un sistema de controlador de versiones (Nuestro repositorio Local).
+GITHUB: Es una plataforma donde podemos guardar nuestros proyectos, usando Git para su gestion 
+(podriamos decir que es y sera nuestro repositorio Remoto).
+REPOSITORIO: Cuando se habla de repositorio es equivalente a decir proyecto.
+HEAD: Representa el commit en el que estamos trabajando en el momento. es decir en el que nos 
+encontramos.
+RAMAS (Branch): Es una linea de tiempo en nuestro proyecto, que nos permiten experimentar, arreglar 
+errores, hacer grandes cambios, organizar el desarrollo de un sistema o aplicacion.
+RAMA MASTER: Es la Rama principal donde comenzamos a trabajar con nuestro proyecto.
+FUSIONES: Es a creacion de un nuevo commits juntando una rama con otra. El procedimiento seria 
+situarnos en la rama que va absolver y ejecutamos $ git merge + nombre de la rama.
+::::::::::::::Git Comandos:::::::::::::
+CONCEPTOS:
+Git Bash : Es una termina en donde se ejecutan comando GIT.
+
+COMANDOS:
+Configuracion del nombre en la consola de Git Bash
+	1) $ git config --global user.name "aqui va  el nombre" (PRESIONAMOS ENTER).
+para ver el resultado colocamos lo mismo sin el contenido en las doble comillas.
+	1.2) $ git config --global user.name (PRESIONAMOS ENTER).
+
+Configuracion del correo electronico en la consola de Git Bash
+	2) $ git config --global user.email "aqui va el nombre del correo electronico"
+	2.1) $ git config --global user.email (Para ver el resultadode la configuracion del mail).
+
+configuracion del color (Muy util para distingir en la consola lo que nos esta diciendo GIT)
+	3) $ git config --global color.ui true (ENTER).
+
+Luego si queremos ver el listado de nuestras configuracion ejecutamos el siguiente comando:
+	4) $ git config --global --list (ENTER).
+
+Pra limpiar nustra consola o terminal Git Bash ejecutamos:
+	5) clear (ENTER).
+
+::::::::::::::Comandos GIT en un Proyecto::::::::::::::::::
+
+1) A traves de la terminal git hasNos movemos hasta nuetros proyecto (Ej.: C:\wamp64\www\ANGULAR)
+2) Luego ejecutamos el comando $ git init (con el cual le decimos a Git que comience a monitorear
+todos los cambios que realizaremos a partir de este momento en nuestro proyecto). Es importante 
+mencionar que este proyecto solo se ejecuta una sola vez.
+3) Comando para conocer el estatus de nuestro proyecto. $ git status. (al ejecutar este comando
+nos enlistara todos los componentes modificado en marcado en color rojo los cuales deberan ser
+agregados con el siguiente comando).
+4) $ git add nos permite agregar los comando que luego seran comitiados. con este comando se 
+puede especificar cual archivo quieres subir y cual no, (Ej.: $ git add index.html). y ejecutar 
+nuevamente el comando notaras que ya no aparece index.html en la lista de los archivos por agregar.
+5) Si queremos agregar todos nuestros archivos ejecutamos $ git add -A. (Con los distintos comandos
+git add lograremos agregar y notaremos que pasaran de estar rojos a verde).
+6) Luego para guardar nuestros cambios ejecutamos $ git commit - m "Mensaje". (El mensaje debe ser
+algo asociado a lo que vamos a guardar Ej.: Cree CRUD de usuario, modifique la funcion eliminar etc.).
+7) $ git log (nos muestra el registro de todos los commit que se han realizados y la personaque 
+lo hizo).
+8) $ git checkout (Nos permite viajar o movernos a traves de nuestras ramas o commits)
+8.1) si deseamos movernos a traves de los commits seria asi: $ git checkout + codigo commit el cual
+nos lo da al ejecutar $git log. (Ej.: $ git checkout 1a543025e505a35dd5f004f57bf6 (Enter))
+8.2) luego de movernos por los commit si deseamos volver al ultimo que se realizo ejecutamos 
+$ git checkout master.
+9) $ git log > commits.txt (Genera un archivo .txt con el listados de todos los commits realizados).
+10) $ git reset --soft + cod-commit (Elimina el commit pero no modifica nuestro codigo o working area).
+11) $ git reset --hard + cod-commit (Elimina el commit y modifica nuestro codigo o working area).
+12) $ git branch (nos enlista las ramas y nos muestra con un asterisco en la que estamos actualmente)
+13) $ git branch -d + nombre de nuestra rama (elimina la rama. Ej.: $ git branc -d test).
+14) $ git marge + nombre de la rama. (permite unir dos ramas relacionando los componentes 
+Ej.: $ git marge test ojo esto teniendo en cuenta que estamos en la rama Master).
+15) $ git checkout -b + nombre de la rama a crear (Este comando permite crear una rama 
+y posicionarnos en ella, es decir se crea y nos coloca alli.)
+16) $ git remote add origin https://github.com/jdiegorb/ANGULAR.git permite unir o enlazar el 
+repositorio local con el remoto. 
+16.1) para verificar que el enlace entre los dos repositorio fue correcto ejecutamos $ git remote -v
+17) $ git remote remove origin (Elimina la union o la conexion que habia entre el repositorio local y 
+remoto).
+18) $ git push origin master (este comando nos permite subir lo que esta en nuestro computador a la 
+rama que creamos en la plataforma github. Es decir, con el PUSH subimos lo que esta en el repositorio 
+local al remoto. la rama master en el codigo pudo haber sido por ejemplo test todo depende de lo que
+queremos subir en ese momento).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
